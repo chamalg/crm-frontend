@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Button } from 'react-bootstrap';
-import { Entry } from './page/entry/EntryPage';
+import { Entry } from './pages/entry/EntryPage';
 
 function App() {
   return (
