@@ -1,12 +1,17 @@
 import React from 'react';
 
-import { Button } from 'react-bootstrap';
+import { DefaultLayout } from './layout/DefaultLayout';
 import { Entry } from './pages/entry/EntryPage';
+
+import './App.css'
+import Dashboard from './pages/dashboard/Dashboard';
 
 function App() {
   return (
     <div className="App">
-      <Entry></Entry>
+      <DefaultLayout>
+        <Dashboard />
+      </DefaultLayout>
     </div>
   );
 }
