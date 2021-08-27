@@ -8,26 +8,23 @@ import dummyTickets from '../../assets/data/dummy-tickets.json';
 export const TicketListing = () => {
 
     const [searchTerm, setSearchTerm] = useState('');
-    const [displayTickets, setDisplayTickets] = useState([]);
+    const [displayTickets, setDisplayTickets] = useState(dummyTickets);
 
     const handleOnChange = e => {
         const { value } = e.target;
         setSearchTerm(value);
         searchTickets(value)
-        console.log(searchTerm);
     }
 
     const searchTickets = (str) => {
-        const displayTickets = dummyTickets.filter(row => {
-            console.log(row)
+        const filtered = dummyTickets.filter(row =>
             row.subject.toLowerCase().includes(str.toLowerCase())
-        })
-        setDisplayTickets(displayTickets);
+        );
+        setDisplayTickets(filtered);
     }
 
     useEffect(() => {
-        setDisplayTickets(dummyTickets);
-    }, [searchTerm])
+    }, [searchTerm, displayTickets])
 
     return (
         <Container>
