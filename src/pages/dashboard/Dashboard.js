@@ -5,6 +5,7 @@ import dummyTickets from '../../assets/data/dummy-tickets.json';
 import BreadcrumbPage from '../../components/breadcrumb/BreadcrumbPage';
 import NewTicket from '../new-ticket/NewTicket';
 import { TicketListing } from '../ticket-listing/TicketListing';
+import TicketInfo from '../ticket-info/TicketInfo';
 
 export default function Dashboard() {
     return (
@@ -36,8 +37,9 @@ export default function Dashboard() {
                 <Col className="recent-ticket">
                     {/* <TicketTable tickets={dummyTickets} /> */}
                     {/* <NewTicket /> */}
-                    <TicketListing/>
-                    <NewTicket/>
+                    {/* <TicketListing/> */}
+                    {/* <NewTicket/> */}
+                    <TicketInfo />
                 </Col>
             </Row>
         </Container>

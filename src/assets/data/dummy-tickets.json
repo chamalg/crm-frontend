@@ -3,60 +3,88 @@
         "id": 1 ,
         "subject": "Issue with SSL certificate",
         "status": "Client response pending",
-        "addedAt": "2020.02.08"      
+        "msg": "Please resolve asap",
+        "addedAt": "2020.02.08",
+        "history":[ {
+            "date": "2021.06.22",
+            "message": "helloo",
+            "messageBy": "client"
+        },{
+            "date": "2021.06.22",
+            "message": "helloo",
+            "messageBy": "client"
+        }   ,{
+            "date": "2021.06.22",
+            "message": "Hello mother fucker",
+            "messageBy": "client"
+        } ,{
+            "date": "2021.06.22",
+            "message": "helloo",
+            "messageBy": "operator"
+        }    
+    ]
     },
     {
         "id": 2 ,
         "subject": "Issue with SSL certificate",
         "status": "Client response pending",
+        "msg": "Please resolve asap",
         "addedAt": "2020.02.08"      
     },
     {
         "id": 3 ,
         "subject": "Issue with SSL certificate",
         "status": "Client response pending",
+        "msg": "Please resolve asap",
         "addedAt": "2020.02.08"      
     },
     {
         "id": 4 ,
         "subject": "Issue with SSL certificate",
         "status": "Client response pending",
+        "msg": "Please resolve asap",
         "addedAt": "2020.02.08"      
     },
     {
         "id": 5 ,
         "subject": "Issue with SSL certificate",
         "status": "Client response pending",
+        "msg": "Please resolve asap",
         "addedAt": "2020.02.08"      
     },
     {
         "id": 6 ,
         "subject": "Issue with SSL certificate",
         "status": "Client response pending",
+        "msg": "Please resolve asap",
         "addedAt": "2020.02.08"      
     },
     {
         "id": 7 ,
         "subject": "Network issue",
-        "status": "Network issu",
+        "status": "Network issue",
+        "msg": "Please resolve asap",
         "addedAt": "2020.02.08"      
     },
     {
         "id": 8 ,
         "subject": "Network issue",
         "status": "Client response pending",
+        "msg": "Please resolve asap",
         "addedAt": "2020.02.08"      
     },
     {
         "id": 9 ,
         "subject": "Network issue",
         "status": "Client response pending",
+        "msg": "Please resolve asap",
         "addedAt": "2020.02.08"      
     },
     {
         "id": 10 ,
         "subject": "Network issue",
         "status": "Client response pending",
+        "msg": "Please resolve asap",
         "addedAt": "2020.02.08"      
     }
 ]
