@@ -1,11 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import TicketTable from '../../components/ticket-table/TicketTable';
-import dummyTickets from '../../assets/data/dummy-tickets.json';
 import BreadcrumbPage from '../../components/breadcrumb/BreadcrumbPage';
-import NewTicket from '../new-ticket/NewTicket';
 import { TicketListing } from '../ticket-listing/TicketListing';
-import TicketInfo from '../ticket-info/TicketInfo';
 import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
@@ -36,11 +32,7 @@ export default function Dashboard() {
 
             <Row>
                 <Col className="recent-ticket">
-                    {/* <TicketTable tickets={dummyTickets} /> */}
-                    {/* <NewTicket /> */}
                     <TicketListing />
-                    {/* <NewTicket/> */}
-                    {/* <TicketInfo /> */}
                 </Col>
             </Row>
         </Container>

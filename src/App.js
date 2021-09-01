@@ -1,6 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
-import { DefaultLayout } from './layout/DefaultLayout';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Entry } from './pages/entry/EntryPage';
 import Dashboard from './pages/dashboard/Dashboard';
 import { TicketListing } from './pages/ticket-listing/TicketListing';
@@ -16,10 +15,10 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Entry} />
-            <PrivateRoutes exact path="/dashboard" component={Dashboard} />
-            <PrivateRoutes exact path="/add-ticket" component={NewTicket} />
-            <PrivateRoutes exact path="/tickets" component={TicketListing} />
-            <PrivateRoutes exact path="/ticket/:id" component={TicketInfo} />
+          <PrivateRoutes exact path="/dashboard" component={Dashboard} />
+          <PrivateRoutes exact path="/add-ticket" component={NewTicket} />
+          <PrivateRoutes exact path="/tickets" component={TicketListing} />
+          <PrivateRoutes exact path="/ticket/:id" component={TicketInfo} />
         </Switch>
       </Router>
     </div>

@@ -32,15 +32,8 @@ export const NewTicket = () => {
 
     const onSave = async (e) => {
         e.preventDefault();
-
         const valid = await shortText(data.subject);
-
-        console.log(data)
-        console.log(valid)
-
-        setData({ ...data, subjectRequired: valid })
-
-        console.log(data);
+        setData({ ...data, subjectRequired: valid });
     }
 
     const showLoading = () => (
