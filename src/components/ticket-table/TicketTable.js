@@ -1,8 +1,9 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
-export default function TicketTable({ tickets }) {
+export const TicketTable = ({ tickets }) => {
 
     return (
         <Table striped bordered hover>
@@ -11,6 +12,7 @@ export default function TicketTable({ tickets }) {
                     <th>#</th>
                     <th>Subject</th>
                     <th>Status</th>
+                    <th>Message</th>
                     <th>Opened Date</th>
                 </tr>
             </thead>
@@ -18,9 +20,14 @@ export default function TicketTable({ tickets }) {
                 {tickets && tickets.length ? (
                     tickets.map((ticket, i) => (
                         <tr key={i}>
-                            <td>{ticket.id}</td>
+                            <td>
+                                <Link to={`/ticket/${ticket.id}`}>
+                                    {ticket.id}
+                                </Link>
+                            </td>
+                            <td>{ticket.subject}</td>
                             <td>{ticket.status}</td>
-                            <td>{ticket.status}</td>
+                            <td>{ticket.msg}</td>
                             <td>{ticket.addedAt}</td>
                         </tr>
                     ))) : (
@@ -29,7 +36,7 @@ export default function TicketTable({ tickets }) {
 
 
             </tbody>
-        </Table>
+        </Table >
     )
 }
 

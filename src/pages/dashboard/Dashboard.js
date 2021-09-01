@@ -6,6 +6,7 @@ import BreadcrumbPage from '../../components/breadcrumb/BreadcrumbPage';
 import NewTicket from '../new-ticket/NewTicket';
 import { TicketListing } from '../ticket-listing/TicketListing';
 import TicketInfo from '../ticket-info/TicketInfo';
+import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
     return (
@@ -17,7 +18,7 @@ export default function Dashboard() {
             </Row>
             <Row>
                 <Col className="text-center mt-5 mb-2">
-                    <Button variant="info" style={{ 'fontSize': '2rem', padding: '10px 30px' }}>Add new ticket</Button>
+                    <Link to="add-ticket"><Button variant="info" style={{ 'fontSize': '2rem', padding: '10px 30px' }}>Add new ticket</Button></Link>
                 </Col>
             </Row>
 

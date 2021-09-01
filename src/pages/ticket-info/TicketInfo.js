@@ -4,11 +4,13 @@ import BreadcrumbPage from '../../components/breadcrumb/BreadcrumbPage';
 import dummyTickets from '../../assets/data/dummy-tickets.json';
 import { MessageHistory } from '../../components/message-history/MessageHistory';
 import { UpdateTicket } from '../../components/update-ticket/UpdateTicket';
+import { useParams } from 'react-router-dom';
 
-const ticket = dummyTickets[0];
-
-export const TicketInfo = () => {
+export const TicketInfo = ({ match }) => {
     const [message, setMessage] = useState('');
+    const [ticket, setTicket] = useState('');
+
+    const { id } = useParams();
 
     const handleOnChange = e => {
         setMessage(e.target.value);
@@ -18,8 +20,13 @@ export const TicketInfo = () => {
     }
 
     useEffect(() => {
-
-    }, [message])
+        for (let i = 0; i < dummyTickets.length; i++) {
+            if (dummyTickets[i].id == id) {
+                setTicket(dummyTickets[i]);
+                continue;
+            }
+        }
+    }, [message, id])
 
     return (
         <Container>
@@ -40,7 +47,9 @@ export const TicketInfo = () => {
             </Row>
             <Row className="mt-4">
                 <Col>
-                    <MessageHistory msg={ticket.history} />
+                    {ticket.history && (
+                        <MessageHistory msg={ticket.history} />
+                    )}
                 </Col>
             </Row>
             <hr />

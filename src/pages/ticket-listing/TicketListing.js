@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import BreadcrumbPage from '../../components/breadcrumb/BreadcrumbPage';
 import { SearchForm } from '../../components/search-form/SearchForm';
-import TicketTable from '../../components/ticket-table/TicketTable';
+import { TicketTable } from '../../components/ticket-table/TicketTable';
 import dummyTickets from '../../assets/data/dummy-tickets.json';
+import { Link } from 'react-router-dom';
 
 export const TicketListing = () => {
 
@@ -35,7 +36,7 @@ export const TicketListing = () => {
             </Row>
             <Row>
                 <Col>
-                    <Button varient="info">Add new Ticket</Button>
+                    <Link to="add-ticket"><Button varient="info">Add new Ticket</Button></Link>
                 </Col>
                 <Col className="text-right">
                     <SearchForm handleOnChange={handleOnChange} searchTerm={searchTerm} />
