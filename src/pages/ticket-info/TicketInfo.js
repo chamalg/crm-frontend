@@ -7,7 +7,7 @@ import { UpdateTicket } from '../../components/update-ticket/UpdateTicket';
 
 const ticket = dummyTickets[0];
 
-export default function TicketInfo() {
+export const TicketInfo = () => {
     const [message, setMessage] = useState('');
 
     const handleOnChange = e => {

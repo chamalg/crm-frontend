@@ -37,9 +37,9 @@ export default function Dashboard() {
                 <Col className="recent-ticket">
                     {/* <TicketTable tickets={dummyTickets} /> */}
                     {/* <NewTicket /> */}
-                    {/* <TicketListing/> */}
+                    <TicketListing />
                     {/* <NewTicket/> */}
-                    <TicketInfo />
+                    {/* <TicketInfo /> */}
                 </Col>
             </Row>
         </Container>

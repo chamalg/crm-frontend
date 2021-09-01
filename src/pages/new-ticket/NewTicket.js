@@ -7,7 +7,7 @@ import { shortText } from '../../utils/Validation';
 
 import './newTicket.css';
 
-export default function NewTicket() {
+export const NewTicket = () => {
 
     const [data, setData] = useState({
         subject: '',
